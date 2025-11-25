@@ -13,5 +13,8 @@ scikit-learn = 0.24.2
 pandas = 1.2.4
 rdkit = 2020.09.1.0
 matplotlib = 3.3.4
-
 ```
+
+## Data Sources
+Our data contain aptamer and riboswitch datasets. For aptamers, the data were collected from numerous literature collections and websites, including the following websites involved in the article:
+1. https://www.aptamer.org/
