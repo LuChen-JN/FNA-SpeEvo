@@ -42,8 +42,8 @@ The code has been tested on:
 ### Step 1: Clone the repository
 
 ```bash
-git clone XXX
-cd XXX
+git clone https://github.com/LuChen-JN/FNA-SpeEvo.git
+cd FNA-SpeEvo
 ```
 
 ### Step 2: Create the conda enviroment
@@ -88,23 +88,45 @@ python -c "imoprt dellife, rdkit; print('dgllife:', dgllife.__version__, '| rdki
 
 ---
 
-## Demo
+## Demo for train
 
-A small demonstration dataset is provided at `datasets/Model-guided evolution of riboswitch activity/`, containing `train.csv`, `val.csv`, and `test.csv`.
+A small demonstration dataset is provided at `/demo/fold_1/`, containing `train.csv`, `val.csv`, and `test.csv`.
 
 ### Run the demo
 
 ```bash
-python main.py
+python main.py --data /demo/fold_1/
 ```
 
 ### Expected output
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- `test_results.txt`
+- `train_results.txt`
+- `dev_results.txt`
+- `model.pt`
 
 ### Execpted runtime
 
-- Approximately **XXX minutes** on a desktop with NVIDIA RTX 2080 Ti.
+- Approximately **30-60 minutes** on a desktop with NVIDIA RTX 2080 Ti.
+
+---
+## Demo for predict
+
+A small demonstration dataset is provided at `/demo/`, containing `predict.csv`.
+
+### Run the demo
+
+```bash
+python application.py --data /demo/
+```
+
+### Expected output
+
+- `predict.txt`
+
+### Execpted runtime
+
+- Approximately **30-60 minutes** on a desktop with NVIDIA RTX 2080 Ti.
 
 ---
 
@@ -121,7 +143,7 @@ The input CSV files must contain the following columns:
 | `SMILES`    | string  | SMILES representation of the small molecule                  |
 | `Y`         | numeric | Interaction lable / value (binary label or continuous score) |
 
-Place your data under `datasets/<your_folder_name>/` with the three files:
+Place your data under `/datasets/<your_folder_name>/` with the three files:
 
 - `train.csv`
 - `test.csv`
@@ -130,7 +152,7 @@ Place your data under `datasets/<your_folder_name>/` with the three files:
 ### Running on your own data
 
 ```bash
-python main.py --data <your_folder_name>
+python main.py --data /datasets/<your_folder_name>
 ```
 
 The `--data` argument is the **folder name** under `datasets/`. Default: `Model-guided evolution of riboswitch activity`.
