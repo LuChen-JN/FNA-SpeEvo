@@ -1,0 +1,3 @@
+FOR Aptamers：In the aptamer sequencing results, although we have asked the sequencing company to remove the primer sequence, some sequences still have primer sequences and need to be further removed.
+
+FOR Riboswitch：The sequencing results in this article are the results of reverse transcription of the RNA sequence, so first we need to replace T with U, then determine the sense strand according to the fixed base combination of the primer region in the riboswitch design, and finally remove the primer region.
