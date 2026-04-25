@@ -1,1 +1,0 @@
-In the aptamer sequencing results, although we have asked the sequencing company to remove the primer sequence, some sequences still have primer sequences and need to be further removed.
